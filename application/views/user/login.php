@@ -17,10 +17,15 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
     rel="stylesheet"
     />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="<?= base_url('assets') ?>/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+
 </head>
 <body>
+
 <!-- Section: Design Block -->
-<section class="">
+<section class="my-5 py-5">
+  <div class="container">
   <!-- Jumbotron -->
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
     <div class="container">
@@ -42,26 +47,10 @@
           <div class="card">
             <div class="card-body py-5 px-md-5">
               <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
-                      <label class="form-label" for="form3Example1">First name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" for="form3Example2">Last name</label>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email address</label>
+                
+              <div class="form-outline mb-4">
+                  <input type="text" id="form3Example3" name="username" class="form-control" />
+                  <label class="form-label" for="form3Example3">Username atau Email</label>
                 </div>
 
                 <!-- Password input -->
@@ -71,36 +60,33 @@
                 </div>
 
                 <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                <div class="form-check justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="IsRememberMe" id="rememberme" checked />
                   <label class="form-check-label" for="form2Example33">
-                    Subscribe to our newsletter
+                    Remember me
                   </label>
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  Sign up
-                </button>
+                <button type="submit" class="btn bg-gradient-primary w-auto me-2">Submit</button>
 
                 <!-- Register buttons -->
                 <div class="text-center">
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
+                <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-5">
                     <i class="fab fa-facebook-f"></i>
                   </button>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
+                  <button type="button" class="btn btn-link btn-floating mx-5">
                     <i class="fab fa-google"></i>
                   </button>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
+                  <button type="button" class="btn btn-link btn-floating mx-5 ">
                     <i class="fab fa-twitter"></i>
                   </button>
-
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
+                </div>
+                <div class="text-center">
+                <a href="<?= site_url()?>Auth/register" class='small text-info' >Belum memiliki akun?</a> 
                 </div>
               </form>
             </div>
@@ -108,6 +94,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- Jumbotron -->
 </section>

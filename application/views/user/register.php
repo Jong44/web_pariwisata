@@ -17,15 +17,19 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
   rel="stylesheet"
 />
+
+<!-- CSS Files -->
+<link id="pagestyle" href="<?= base_url('assets') ?>/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+
 </head>
 <body>
 <!-- Section: Design Block -->
 <section class="text-center">
   <!-- Background image -->
   <div class="p-5 bg-image" style="
-        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        background-image: url('<?= base_url('assets') ?>/img/slide2.png');
         height: 300px;
-        "></div>
+        "><span class="mask bg-gradient-primary opacity-4"></span></div>
   <!-- Background image -->
 
   <div class="card mx-4 mx-md-5 shadow-5-strong" style="
@@ -39,46 +43,54 @@
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5">Sign up now</h2>
           <form>
+            
+            <div class="form-outline mb-4">
+              <input type="text" id="username" name="username " class="form-control" />
+              <label class="form-label">Enter Username</label>
+            </div>
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example1" class="form-control" />
-                  <label class="form-label" for="form3Example1">First name</label>
+                  <input type="text" id="form3Example1" name="first name" class="form-control" />
+                  <label class="form-label">First name</label>
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example2" class="form-control" />
-                  <label class="form-label" for="form3Example2">Last name</label>
+                  <input type="text" id="form3Example2" name="last name" class="form-control" />
+                  <label class="form-label">Last name</label>
                 </div>
               </div>
             </div>
 
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form3Example3" class="form-control" />
-              <label class="form-label" for="form3Example3">Email address</label>
+              <input type="email" id="email" name="email" class="form-control" />
+              <label class="form-label">Email address</label>
             </div>
 
             <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="form3Example4" class="form-control" />
-              <label class="form-label" for="form3Example4">Password</label>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="password" id="pass" name="pass" class="form-control" />
+                  <label class="form-label">Enter Password</label>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="password" id="repeatpass" name="repeatpass" class="form-control" />
+                  <label class="form-label">Repeat Password</label>
+                </div>
+              </div>
             </div>
 
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-              <label class="form-check-label" for="form2Example33">
-                Subscribe to our newsletter
-              </label>
-            </div>
-
+            
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">
-              Sign up
-            </button>
+            <button type="submit" class="btn bg-gradient-primary w-auto me-2">Submit</button>
+
+
 
             <!-- Register buttons -->
             <div class="text-center">
@@ -99,6 +111,7 @@
                 <i class="fab fa-github"></i>
               </button>
             </div>
+            <a href="<?= site_url()?>Auth/index" class='small text-info' >Sudah memiliki akun?</a>
           </form>
         </div>
       </div>
