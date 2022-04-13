@@ -46,29 +46,25 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-              <form>
+              <form action="<?= site_url('Auth/proses')?>" method="post">
                 
               <div class="form-outline mb-4">
                   <input type="text" id="form3Example3" name="username" class="form-control" />
-                  <label class="form-label" for="form3Example3">Username atau Email</label>
+                  <label class="form-label" for="form3Example3">Username</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
+                  <input type="password" id="form3Example4" name="password" class="form-control" />
                   <label class="form-label" for="form3Example4">Password</label>
                 </div>
 
-                <!-- Checkbox -->
-                <div class="form-check justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="IsRememberMe" id="rememberme" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Remember me
-                  </label>
-                </div>
+               
 
                 <!-- Submit button -->
                 <button type="submit" class="btn bg-gradient-primary w-auto me-2">Submit</button>
+
+              
 
                 <!-- Register buttons -->
                 <div class="text-center">
@@ -88,6 +84,16 @@
                 <div class="text-center">
                 <a href="<?= site_url()?>Auth/register" class='small text-info' >Belum memiliki akun?</a> 
                 </div>
+
+                  <?php
+                      if($this->session->flashdata('pesan') <> ''){
+                  ?>
+                    <div class="alert alert-dismissible alert-danger">
+                      <?php echo $this->session->flashdata('pesan');?>
+                    </div>
+                  <?php
+                  }
+                  ?>
               </form>
             </div>
           </div>

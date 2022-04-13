@@ -36,33 +36,31 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
-            Page
+            Log Out
             <img src="<?= base_url('assets') ?>/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
           </a>
           <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
             <div class="d-none d-lg-block">
-  <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
-    Landing Pages
-  </h6>
-  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
-    <span>About Us</span>
-  </a>
-  <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
-    <span>Contact Us</span>
-  </a>
-  <a href="./pages/author.html" class="dropdown-item border-radius-md">
-    <span>Author</span>
-  </a>
-  <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
-    Account
-  </h6>
-  <a href="<?= site_url()?>Auth/index" class="dropdown-item border-radius-md">
-    <span>Log In</span>
-  </a>
-  <a href="<?= site_url()?>Auth/register" class="dropdown-item border-radius-md">
-    <span>Registrasi</span>
-  </a>
-</div>
+            <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
+            Account
+          </h6>
+          <a href="<?= site_url()?>Auth/logout" class="dropdown-item border-radius-md">
+            <span>Log Out</span>
+          </a>
+          <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
+            Landing Pages
+          </h6>
+          <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+            <span>About Us</span>
+          </a>
+          <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+            <span>Contact Us</span>
+          </a>
+          <a href="./pages/author.html" class="dropdown-item border-radius-md">
+            <span>Author</span>
+          </a>
+          
+    </div>
 
 
         <li class="nav-item dropdown dropdown-hover mx-2">
@@ -393,7 +391,7 @@
         </li>
         <li class="nav-item my-auto ms-3 ms-lg-0">
           
-          <a href="https://www.creative-tim.com/product/material-kit-pro" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Upgrade to Pro</a>
+        <a href="<?= site_url('user/edit_profile')?>" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><?php echo $this->session->userdata('username');?></a>
           
         </li>
       </ul>
