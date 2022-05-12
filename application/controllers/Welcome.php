@@ -14,4 +14,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('partials/index');
 		$this->load->view('partials/footer');
 	}
+
+
 }

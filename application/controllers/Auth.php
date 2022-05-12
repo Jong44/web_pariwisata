@@ -48,10 +48,16 @@ class Auth extends CI_Controller {
 		$this->load->view('user/register');
 	}
 
-	
+	public function svRegister()
+		{
+			$this->load->model('Auth_model');
+			$this->Auth_model->register();
+			redirect ('Auth');
+		}
+		
 	function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('welcome');
+		redirect('Auth');
 	}
 }
